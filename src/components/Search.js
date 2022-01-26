@@ -2,12 +2,9 @@ import React, { useState } from "react";
 
 function Search({ onSearchFilter }) {
 
-  const [ currentSearch, setCurrentSearch ] = useState()
-
   function handleSearch (e){
-    console.log(currentSearch)
-    setCurrentSearch(e.target.value)
-    onSearchFilter(currentSearch);
+
+    onSearchFilter(e.target.value);
   }
 
   return (
